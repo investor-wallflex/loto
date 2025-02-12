@@ -14,7 +14,7 @@
             padding: 0;
         }
         .container {
-            max-width: 1200px;
+            width: 100%; /* Ensure full width on mobile */
             margin: auto;
             padding: 20px;
             display: flex;
@@ -26,16 +26,17 @@
             font-size: 2.5em;
             font-weight: bold;
             color: #000;
-           
         }
         .wheel-container {
             display: flex;
             justify-content: center;
             margin: 20px 0;
             position: relative;
+            width: 100%; /* Make sure the wheel container takes full width */
+            max-width: 400px; /* Limit the maximum width for large screens */
         }
         .wheel {
-            max-width: 100%;
+            width: 100%;
             height: auto;
         }
         .prizes {
@@ -46,7 +47,6 @@
             font-size: 1.2em;
             font-weight: bold;
             color: #000;
-            /* background: rgba(255, 255, 255, 0.8); */
             padding: 10px;
             border-radius: 5px;
             color: green;
@@ -71,7 +71,7 @@
             justify-content: space-between;
             gap: 110px;
             margin-top: 30px;
-            
+            width: 100%; /* Ensure links take full width */
         }
         .links a {
             text-decoration: none;
@@ -89,6 +89,14 @@
                 font-size: 1em;
                 right: 5px;
                 padding: 5px;
+            }
+            .wheel-container {
+                max-width: 100%; /* Ensure the wheel takes up full width */
+            }
+            .links {
+                flex-direction: column; /* Stack links vertically on smaller screens */
+                gap: 10px;
+                align-items: center; /* Center align the links */
             }
         }
     </style>
