@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Spin & Win</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: white;
+            text-align: center;
+            margin: 0;
+            padding: 0;
+        }
+        .container {
+            max-width: 1200px;
+            margin: auto;
+            padding: 20px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+        }
+        .title {
+            font-size: 2.5em;
+            font-weight: bold;
+            color: #000;
+           
+        }
+        .wheel-container {
+            display: flex;
+            justify-content: center;
+            margin: 20px 0;
+            position: relative;
+        }
+        .wheel {
+            max-width: 100%;
+            height: auto;
+        }
+        .prizes {
+            position: absolute;
+            top: 0;
+            right: -10px;
+            text-align: center;
+            font-size: 1.2em;
+            font-weight: bold;
+            color: #000;
+            /* background: rgba(255, 255, 255, 0.8); */
+            padding: 10px;
+            border-radius: 5px;
+            color: green;
+            font-family: 'Times New Roman', Times, serif;
+        }
+        .spin-btn {
+            background-color: #000;
+            color: green;
+            font-size: 1.5em;
+            padding: 10px 20px;
+            border: none;
+            cursor: pointer;
+            margin-top: 20px;
+            transition: background 0.3s;
+            border-radius: 0 10px;
+        }
+        .spin-btn:hover {
+            background-color: #333;
+        }
+        .links {
+            display: flex;
+            justify-content: space-between;
+            gap: 110px;
+            margin-top: 30px;
+            
+        }
+        .links a {
+            text-decoration: none;
+            color: black;
+            font-size: 1em;
+        }
+        @media (max-width: 768px) {
+            .title {
+                font-size: 2em;
+            }
+            .spin-btn {
+                font-size: 1.2em;
+            }
+            .prizes {
+                font-size: 1em;
+                right: 5px;
+                padding: 5px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1 class="title">Spin & Win</h1>
+        <div class="wheel-container">
+            <img src="./d7da228d6722419d9091f61d86786334-removebg-preview.png" alt="Spin Wheel" class="wheel">
+            <div class="prizes">
+                FORTUNE <br>
+                FAVORS <br>
+                THE BOLD... <br>
+                PLAY <br>
+                NOW AND <br>
+                WIN BIG!
+            </div>
+        </div>
+        <button class="spin-btn"  onclick="window.location.href='Spin & Win.html';">SPIN NOW <br> TO WIN BIG!</button>
+        <div class="links">
+            <a href="Terms & Conditions.html">Terms & Conditions</a>
+            <a href="faq.html">FAQ</a>
+        </div>
+    </div>
+</body>
+</html>

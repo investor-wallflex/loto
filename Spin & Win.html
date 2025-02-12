@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Spin & Win</title>
+    <style>
+        /* General Styles */
+        body {
+            font-family: Arial, sans-serif;
+            background-color: white;
+            text-align: center;
+            margin: 0;
+            padding: 0;
+        }
+
+        .title {
+            font-size: 2.5em;
+            font-weight: bold;
+            color: #000;
+        }
+
+        /* Container */
+        .container {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            padding: 20px;
+            margin-top: 100px;
+        }
+
+        /* Logo */
+        .logo {
+            width: 200px;
+            max-width: 100%;
+        }
+
+        /* Instruction Text */
+        .instruction {
+            font-size: 1.2em;
+            color: black;
+            font-weight: bold;
+            margin: 20px 0;
+        }
+
+        /* Input Field */
+        .input-field {
+            width: 90%;
+            max-width: 400px;
+            padding: 12px;
+            font-size: 1em;
+            border: 2px solid #000;
+            border-radius: 5px;
+            outline: none;
+            text-align: center;
+        }
+
+        /* Proceed Button */
+        .proceed-btn {
+            background-color: black;
+            color: green;
+            font-size: 1.2em;
+            font-weight: bold;
+            padding: 12px 20px;
+            border: none;
+            cursor: pointer;
+            margin-top: 15px;
+            border-radius: 30px;
+            width: 90%;
+            max-width: 250px;
+            transition: 0.3s;
+        }
+
+        .proceed-btn:hover {
+            background-color: #333;
+        }
+
+        /* Responsive Styles */
+        @media (min-width: 768px) {
+            .logo {
+                width: 300px;
+            }
+
+            .instruction {
+                font-size: 1.5em;
+            }
+
+            .input-field {
+                font-size: 1.2em;
+                padding: 15px;
+            }
+
+            .proceed-btn {
+                font-size: 1.5em;
+                padding: 15px 30px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1 class="title">Spin & Win</h1>
+        <img src="./images-removebg-preview.png" alt="Spin & Win Logo" class="logo">
+        <p class="instruction">Please enter your mobile number below</p>
+        <input type="text" class="input-field" id="mobileNumber" placeholder="Enter your mobile number">
+        <button class="proceed-btn" onclick="storeMobileNumber()">Proceed</button>
+    </div>
+
+    <script>
+        function storeMobileNumber() {
+            let mobileNumber = document.getElementById('mobileNumber').value.trim();
+            
+            if (mobileNumber === '' || isNaN(mobileNumber) || mobileNumber.length < 10) {
+                alert("Please enter a valid mobile number.");
+                return;
+            }
+
+            // Store the mobile number in localStorage
+            localStorage.setItem('mobileNumber', mobileNumber);
+
+            // Redirect to spinwheel.html
+            window.location.href = 'spinwheel.html';
+        }
+    </script>
+</body>
+</html>
